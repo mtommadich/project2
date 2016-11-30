@@ -1,0 +1,39 @@
+.thumbnail {
+  /*  margin-top: 50px; */
+    box-shadow: 0 0 5px #999;    
+    padding:0 15px 0 15px;
+    border-radius: 1em;
+} 
+
+.thumbnail:hover {
+  /*  margin-top: 50px; */
+    box-shadow: 0 10px 25px #a1a2a2;
+    transition: box-shadow .55s;
+    padding:0 15px 0 15px;
+    
+} 
+
+.thumbnail .description{
+  color: #a1a2a2;
+  font-size: 1.2em;
+}
+
+.container-fluid {
+  box-shadow: 0 0 5px #a1a2a2;
+}
+
+/*Buttons*/
+.btn-rounded{
+  border-radius: 1em; 
+  font-size: 1.7em;
+  margin-bottom: .7em;
+  box-shadow: 0 0 4px #666;
+  
+}
+
+.btn-rounded:hover{
+  border-radius: 1em; 
+  box-shadow: 0 0 10px #0055ff
+
+  
+}
