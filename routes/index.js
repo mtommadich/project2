@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var Pdf = require ('../models/pdf')
+var csrf = require('csurf');
+
+var csrfProtection = csrf();
+router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,4 +19,13 @@ router.get('/', function(req, res, next) {
   });
 });
 
+//Get user registration this also provides csrf token athentication
+router.get('/user/register', function(req, res, next){
+  res.render('user/register',{csrfToken: req.csrfToken()});
+});
+
+//register the user and redirect to homepage
+router.post('/user/register', function(req, res, next){
+  res.redirect('/');
+});
 module.exports = router;
