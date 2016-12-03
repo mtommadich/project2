@@ -1,0 +1,101 @@
+All mongoDB collection methods can be found here:
+
+https://docs.mongodb.com/v3.2/reference/method/js-collection/https
+
+Below are details about the methods we use in this webapp.
+
+
+db.collection.drop()
+--------------------
+    Removes a collection from the database. The method also removes any indexes associated with the dropped collection. The method provides a wrapper around the drop command.
+
+    db.collection.drop() has the form:
+
+    db.collection.drop()
+
+    db.collection.drop() takes no arguments and will produce an error if called with any arguments.
+    Returns:	
+
+        true when successfully drops a collection.
+        false when collection to drop does not exist.
+
+Behavior
+
+This method obtains a write lock on the affected database and will block other operations until it has completed.
+Example
+
+The following operation drops the students collection in the current database.
+
+db.students.drop()
+
+==================================================================================================================
+
+
+db.collection.find(query,projection)
+------------------------------------
+
+    Selects documents in a collection and returns a cursor to the selected documents.
+    Parameter 	Type 	Description
+    query 	document 	Optional. Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}).
+    projection 	document 	Optional. Specifies the fields to return in the documents that match the query filter. To return all fields in the matching documents, omit this parameter. For details, see Projection.
+    Returns:	A cursor to the documents that match the query criteria. When the find() method “returns documents,” the method is actually returning a cursor to the documents.
+
+Behavior
+Projection
+
+The projection parameter determines which fields are returned in the matching documents. The projection parameter takes a document of the following form:
+
+{ field1: <value>, field2: <value> ... }
+
+The <value> can be any of the following:
+
+    1 or true to include the field in the return documents.
+    0 or false to exclude the field.
+    Expression using a Projection Operators.
+
+Note
+
+For the _id field, you do not have to explicitly specify _id: 1 to return the _id field. The find() method always returns the _id field unless you specify _id: 0 to suppress the field.
+
+A projection cannot contain both include and exclude specifications, except for the exclusion of the _id field. In projections that explicitly include fields, the _id field is the only field that you can explicitly exclude.
+Cursor Handling
+
+Executing db.collection.find() in the mongo shell automatically iterates the cursor to display up to the first 20 documents. Type it to continue iteration.
+
+To access the returned documents with a driver, use the appropriate cursor handling mechanism for the driver language.
+ 
+More information here:
+https://docs.mongodb.com/v3.2/reference/method/db.collection.find/#db.collection.find
+
+==================================================================================================================
+
+db.collection.save()
+--------------------
+    Updates an existing document or inserts a new document, depending on its document parameter.
+
+    The save() method has the following form:
+
+    Changed in version 2.6.
+
+    db.collection.save(
+       <document>,
+       {
+         writeConcern: <document>
+       }
+    )
+
+    Parameter 	Type 	Description
+    document 	document 	A document to save to the collection.
+    writeConcern 	document 	
+
+    Optional. A document expressing the write concern. Omit to use the default write concern. See Write Concern.
+
+    New in version 2.6.
+
+    Changed in version 2.6: The save() returns an object that contains the status of the operation.
+    Returns:	A WriteResult object that contains the status of the operation.
+
+See more on:
+https://docs.mongodb.com/v3.2/reference/method/db.collection.save/#db.collection.save
+
+==================================================================================================================

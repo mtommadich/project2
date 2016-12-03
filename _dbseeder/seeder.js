@@ -30,25 +30,25 @@ var pdfs = [
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
-  title:'ANDROID_STUDIO_APPLICATION_DEVELOPMENT',
+  title:'ANDROID STUDIO APPLICATION DEVELOPMENT',
   category: '3D Modelling',
   description: 'Learn Android Programming!'
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
-  title:'ASYNCHRONOUS_ANDROID',
+  title:'ASYNCHRONOUS ANDROID',
   category: '3D Modelling',
   description: 'Learn Android Programming!'
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
-  title:'BURP_SUITE_ESSENTIALS',
+  title:'BURP SUITE ESSENTIALS',
   category: 'Web Development',
   description: 'Learn burp suite!'
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
-  title:'INSTANT_NODEJS_STARTER',
+  title:'INSTANT NODEJS STARTER',
   category: 'Web Development',
   description: 'Learn about nodejs!'
   })  
