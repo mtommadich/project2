@@ -1,0 +1,10 @@
+This folder is required for handlebars. It must be named as is in order for handlebars to use it.This
+This folder holds the layouts of all bootstrap components which we use on the site.This
+E.g. Navbar (currently only that). 
+Partials can be used in any .hbs layout file and go between curly braces wherever
+they are supposed to show in the html hirarchy, like so:
+
+<body>
+{{> header}} - you probably guessed it, but header itself is defined in a file called header.hbs
+
+</body>

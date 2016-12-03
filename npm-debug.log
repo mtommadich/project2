@@ -1,0 +1,599 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install', '-g', 'mean-cli', '--save' ]
+2 info using npm@2.6.0
+3 info using node@v0.10.36
+4 verbose node symlink /usr/bin/node
+5 silly cache add args [ 'mean-cli', null ]
+6 verbose cache add spec mean-cli
+7 silly cache add parsed spec { raw: 'mean-cli',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'mean-cli',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 verbose addNamed mean-cli@*
+9 silly addNamed semver.valid null
+10 silly addNamed semver.validRange *
+11 silly addNameRange { name: 'mean-cli', range: '*', hasData: false }
+12 silly mapToRegistry name mean-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/mean-cli
+16 verbose addNameRange registry:https://registry.npmjs.org/mean-cli not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/mean-cli
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 16:32:19
+20 verbose request id c6518279fc396cc0
+21 verbose etag "2TJ88XSOR92IOZ5RKI1BB5AUG"
+22 http request GET https://registry.npmjs.org/mean-cli
+23 http 200 https://registry.npmjs.org/mean-cli
+24 silly get cb [ 200,
+24 silly get   { server: 'nginx/1.10.1',
+24 silly get     'content-type': 'application/json',
+24 silly get     'last-modified': 'Sat, 15 Oct 2016 12:06:23 GMT',
+24 silly get     etag: 'W/"58021bbf-2e278"',
+24 silly get     'content-encoding': 'gzip',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'content-length': '10806',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Fri, 02 Dec 2016 21:32:19 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-iad2623-IAD',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1480714339.913684,VS0,VE3',
+24 silly get     vary: 'Accept-Encoding' } ]
+25 verbose get saving mean-cli to /home/cabox/.npm/registry.npmjs.org/mean-cli/.cache.json
+26 silly addNameRange number 2 { name: 'mean-cli', range: '*', hasData: true }
+27 silly addNameRange versions [ 'mean-cli',
+27 silly addNameRange   [ '0.0.0',
+27 silly addNameRange     '0.0.1',
+27 silly addNameRange     '0.0.2',
+27 silly addNameRange     '0.0.3',
+27 silly addNameRange     '0.0.4',
+27 silly addNameRange     '0.5.25',
+27 silly addNameRange     '0.5.26',
+27 silly addNameRange     '0.5.27',
+27 silly addNameRange     '0.5.31',
+27 silly addNameRange     '0.5.34',
+27 silly addNameRange     '0.9.0',
+27 silly addNameRange     '0.9.1',
+27 silly addNameRange     '0.0.9',
+27 silly addNameRange     '0.0.10',
+27 silly addNameRange     '0.0.11',
+27 silly addNameRange     '0.0.12',
+27 silly addNameRange     '0.9.2',
+27 silly addNameRange     '0.9.3',
+27 silly addNameRange     '0.9.4',
+27 silly addNameRange     '0.9.5',
+27 silly addNameRange     '0.9.6',
+27 silly addNameRange     '0.9.7',
+27 silly addNameRange     '0.9.8',
+27 silly addNameRange     '0.9.9',
+27 silly addNameRange     '0.9.10',
+27 silly addNameRange     '0.9.11',
+27 silly addNameRange     '0.9.12',
+27 silly addNameRange     '0.9.13',
+27 silly addNameRange     '0.9.14',
+27 silly addNameRange     '0.9.15',
+27 silly addNameRange     '0.9.16',
+27 silly addNameRange     '0.9.17',
+27 silly addNameRange     '0.9.18',
+27 silly addNameRange     '0.9.19',
+27 silly addNameRange     '0.9.20',
+27 silly addNameRange     '0.9.21',
+27 silly addNameRange     '0.9.22',
+27 silly addNameRange     '0.9.23',
+27 silly addNameRange     '0.9.24',
+27 silly addNameRange     '0.9.25',
+27 silly addNameRange     '0.9.26',
+27 silly addNameRange     '0.9.27',
+27 silly addNameRange     '0.9.28',
+27 silly addNameRange     '0.9.29',
+27 silly addNameRange     '0.10.1',
+27 silly addNameRange     '0.10.2',
+27 silly addNameRange     '0.10.3',
+27 silly addNameRange     '0.10.4',
+27 silly addNameRange     '0.10.5',
+27 silly addNameRange     '0.10.6',
+27 silly addNameRange     '0.10.7',
+27 silly addNameRange     '0.10.8',
+27 silly addNameRange     '0.10.9',
+27 silly addNameRange     '0.10.10',
+27 silly addNameRange     '0.10.11',
+27 silly addNameRange     '0.10.12',
+27 silly addNameRange     '0.10.13',
+27 silly addNameRange     '0.10.14',
+27 silly addNameRange     '0.10.15',
+27 silly addNameRange     '0.10.16',
+27 silly addNameRange     '0.10.17',
+27 silly addNameRange     '0.11.0',
+27 silly addNameRange     '0.11.1',
+27 silly addNameRange     '0.12.1',
+27 silly addNameRange     '0.12.2',
+27 silly addNameRange     '0.12.3',
+27 silly addNameRange     '0.12.4',
+27 silly addNameRange     '0.12.5',
+27 silly addNameRange     '0.12.6',
+27 silly addNameRange     '0.12.7',
+27 silly addNameRange     '0.12.8',
+27 silly addNameRange     '0.12.9',
+27 silly addNameRange     '0.12.10',
+27 silly addNameRange     '0.12.11',
+27 silly addNameRange     '0.12.13',
+27 silly addNameRange     '0.12.14',
+27 silly addNameRange     '0.12.15' ] ]
+28 verbose addNamed mean-cli@0.12.15
+29 silly addNamed semver.valid 0.12.15
+30 silly addNamed semver.validRange 0.12.15
+31 silly mapToRegistry name mean-cli
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/mean-cli
+35 verbose addRemoteTarball https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz not in flight; adding
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz',
+36 verbose addRemoteTarball   'caa4af76dffa8a65d038c585efd9248c542d72e8' ]
+37 info retry fetch attempt 1 at 16:32:19
+38 info attempt registry request try #1 at 16:32:19
+39 http fetch GET https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz
+40 http fetch 200 https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz
+41 silly fetchAndShaCheck shasum caa4af76dffa8a65d038c585efd9248c542d72e8
+42 verbose addTmpTarball /tmp/npm-584-fda34fd7/registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz not in flight; adding
+43 verbose addTmpTarball already have metadata; skipping unpack for mean-cli@0.12.15
+44 silly cache afterAdd mean-cli@0.12.15
+45 verbose afterAdd /home/cabox/.npm/mean-cli/0.12.15/package/package.json not in flight; writing
+46 verbose afterAdd /home/cabox/.npm/mean-cli/0.12.15/package/package.json written
+47 silly install resolved [ { name: 'mean-cli',
+47 silly install resolved     description: 'Simple command line interface for installing and managing MEAN apps',
+47 silly install resolved     version: '0.12.15',
+47 silly install resolved     author: { name: 'https://github.com/linnovate/mean-cli/graphs/contributors' },
+47 silly install resolved     bin:
+47 silly install resolved      { mean: './bin/mean',
+47 silly install resolved        'mean-init': './bin/mean-init',
+47 silly install resolved        'mean-authorize': './bin/mean-authorize',
+47 silly install resolved        'mean-whoami': './bin/mean-whoami',
+47 silly install resolved        'mean-login': './bin/mean-login',
+47 silly install resolved        'mean-addKey': './bin/mean-addKey',
+47 silly install resolved        'mean-publish': './bin/mean-publish',
+47 silly install resolved        'mean-search': './bin/mean-search',
+47 silly install resolved        'mean-register': './bin/mean-register',
+47 silly install resolved        'mean-postinstall': './bin/mean-postinstall',
+47 silly install resolved        'mean-preinstall': './bin/mean-preinstall',
+47 silly install resolved        'mean-install': './bin/mean-install',
+47 silly install resolved        'mean-uninstall': './bin/mean-uninstall',
+47 silly install resolved        'mean-docs': './bin/mean-docs',
+47 silly install resolved        'mean-package': './bin/mean-package',
+47 silly install resolved        'mean-list': './bin/mean-list',
+47 silly install resolved        'mean-status': './bin/mean-status',
+47 silly install resolved        'mean-user': './bin/mean-user',
+47 silly install resolved        'mean-logout': './bin/mean-logout',
+47 silly install resolved        'mean-disable': './bin/mean-disable',
+47 silly install resolved        'mean-enable': './bin/mean-enable' },
+47 silly install resolved     contributors: 'https://github.com/linnovate/mean-cli/graphs/contributors',
+47 silly install resolved     dependencies:
+47 silly install resolved      { 'async-series': 'latest',
+47 silly install resolved        bower: '^1.3.8',
+47 silly install resolved        chalk: '^1.1.3',
+47 silly install resolved        commander: '^2.4.0',
+47 silly install resolved        crypto: 'latest',
+47 silly install resolved        inquirer: '^1.0.2',
+47 silly install resolved        lodash: '^4.12.0',
+47 silly install resolved        mongoose: '~4.4.15',
+47 silly install resolved        opener: '^1.3.0',
+47 silly install resolved        progress: '^1.1.8',
+47 silly install resolved        prompt: '^1.0.0',
+47 silly install resolved        request: '^2.72.0',
+47 silly install resolved        shelljs: '^0.7.0' },
+47 silly install resolved     devDependencies:
+47 silly install resolved      { jshint: '^2.5.10',
+47 silly install resolved        mocha: '^2.4.5',
+47 silly install resolved        'precommit-hook': '^3.0.0',
+47 silly install resolved        should: '^8.3.1' },
+47 silly install resolved     keywords: [ 'mean', 'meanio', 'mean.io', 'mean-cli' ],
+47 silly install resolved     license: 'MIT',
+47 silly install resolved     main: 'index',
+47 silly install resolved     preferGlobal: true,
+47 silly install resolved     repository:
+47 silly install resolved      { type: 'git',
+47 silly install resolved        url: 'git+https://github.com/linnovate/mean-cli.git' },
+47 silly install resolved     scripts:
+47 silly install resolved      { test: 'node node_modules/.bin/mocha test/**/*.js -R spec',
+47 silly install resolved        lint: 'jshint .',
+47 silly install resolved        validate: 'npm ls' },
+47 silly install resolved     'pre-commit': [ 'lint', 'validate', 'test' ],
+47 silly install resolved     gitHead: '480e0228740e85abf466a9d85e691c299dddec44',
+47 silly install resolved     bugs: { url: 'https://github.com/linnovate/mean-cli/issues' },
+47 silly install resolved     homepage: 'https://github.com/linnovate/mean-cli#readme',
+47 silly install resolved     _id: 'mean-cli@0.12.15',
+47 silly install resolved     _shasum: 'caa4af76dffa8a65d038c585efd9248c542d72e8',
+47 silly install resolved     _from: 'mean-cli@*',
+47 silly install resolved     _npmVersion: '3.10.3',
+47 silly install resolved     _nodeVersion: '5.9.1',
+47 silly install resolved     _npmUser: { name: 'sarar', email: 'sarar@linnovate.net' },
+47 silly install resolved     dist:
+47 silly install resolved      { shasum: 'caa4af76dffa8a65d038c585efd9248c542d72e8',
+47 silly install resolved        tarball: 'https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz' },
+47 silly install resolved     maintainers:
+47 silly install resolved      [ [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object],
+47 silly install resolved        [Object] ],
+47 silly install resolved     _npmOperationalInternal:
+47 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+47 silly install resolved        tmp: 'tmp/mean-cli-0.12.15.tgz_1474445938677_0.34826612938195467' },
+47 silly install resolved     directories: {},
+47 silly install resolved     _resolved: 'https://registry.npmjs.org/mean-cli/-/mean-cli-0.12.15.tgz' } ]
+48 info install mean-cli@0.12.15 into /usr/lib
+49 info installOne mean-cli@0.12.15
+50 verbose installOne of mean-cli to /usr/lib not in flight; installing
+51 verbose lock using /home/cabox/.npm/_locks/mean-cli-e77487bc052d558f.lock for /usr/lib/node_modules/mean-cli
+52 silly install write writing mean-cli 0.12.15 to /usr/lib/node_modules/mean-cli
+53 silly cache addNamed cb mean-cli@0.12.15
+54 verbose unbuild lib/node_modules/mean-cli
+55 info preuninstall mean-cli@0.9.20
+56 info uninstall mean-cli@0.9.20
+57 verbose unbuild rmStuff mean-cli@0.9.20 from /usr/lib/node_modules
+58 verbose gentlyRm verifying that /usr is managed by npm
+59 verbose gentlyRm verifying that /usr is managed by npm
+60 verbose gentlyRm verifying that /usr is managed by npm
+61 verbose gentlyRm verifying that /usr is managed by npm
+62 verbose gentlyRm verifying that /usr is managed by npm
+63 verbose gentlyRm verifying that /usr is managed by npm
+64 verbose gentlyRm verifying that /usr is managed by npm
+65 verbose gentlyRm verifying that /usr is managed by npm
+66 verbose gentlyRm verifying that /usr is managed by npm
+67 verbose gentlyRm verifying that /usr is managed by npm
+68 verbose gentlyRm verifying that /usr is managed by npm
+69 verbose gentlyRm verifying that /usr is managed by npm
+70 verbose gentlyRm verifying that /usr is managed by npm
+71 verbose gentlyRm verifying that /usr is managed by npm
+72 verbose gentlyRm verifying that /usr is managed by npm
+73 verbose gentlyRm verifying that /usr is managed by npm
+74 verbose gentlyRm verifying that /usr is managed by npm
+75 verbose gentlyRm verifying that /usr is managed by npm
+76 verbose gentlyRm verifying that /usr is managed by npm
+77 verbose gentlyRm verifying that /usr is managed by npm
+78 silly isManaged /usr is not inside /usr/lib/node_modules
+79 silly isManaged /usr is not inside /usr/lib/node_modules
+80 silly isManaged /usr is not inside /usr/lib/node_modules
+81 silly isManaged /usr is not inside /usr/lib/node_modules
+82 silly isManaged /usr is not inside /usr/lib/node_modules
+83 silly isManaged /usr is not inside /usr/lib/node_modules
+84 silly isManaged /usr is not inside /usr/lib/node_modules
+85 silly isManaged /usr is not inside /usr/lib/node_modules
+86 silly isManaged /usr is not inside /usr/lib/node_modules
+87 silly isManaged /usr is not inside /usr/lib/node_modules
+88 silly isManaged /usr is not inside /usr/lib/node_modules
+89 silly isManaged /usr is not inside /usr/lib/node_modules
+90 silly isManaged /usr/lib/node_modules is inside /usr
+91 silly gentlyRm /usr is managed by npm
+92 silly gentlyRm /usr/bin/mean-publish is under /usr
+93 verbose gentlyRm vacuuming /usr/bin/mean-publish up to /usr
+94 silly isManaged /usr is not inside /usr/lib/node_modules
+95 silly isManaged /usr is not inside /usr/lib/node_modules
+96 silly isManaged /usr is not inside /usr/lib/node_modules
+97 silly isManaged /usr is not inside /usr/lib/node_modules
+98 silly isManaged /usr is not inside /usr/lib/node_modules
+99 silly isManaged /usr is not inside /usr/lib/node_modules
+100 silly isManaged /usr is not inside /usr/lib/node_modules
+101 silly isManaged /usr is not inside /usr/lib/node_modules
+102 silly isManaged /usr is not inside /usr/lib/node_modules
+103 silly isManaged /usr is not inside /usr/lib/node_modules
+104 silly isManaged /usr is not inside /usr/lib/node_modules
+105 silly isManaged /usr is not inside /usr/lib/node_modules
+106 silly isManaged /usr is not inside /usr/lib/node_modules
+107 silly isManaged /usr is not inside /usr/lib/node_modules
+108 silly isManaged /usr is not inside /usr/lib/node_modules
+109 silly isManaged /usr is not inside /usr/lib/node_modules
+110 silly isManaged /usr is not inside /usr/lib/node_modules
+111 silly isManaged /usr is not inside /usr/lib/node_modules
+112 silly isManaged /usr is not inside /usr/lib/node_modules
+113 silly isManaged /usr is not inside /usr/lib/node_modules
+114 silly isManaged /usr is not inside /usr/lib/node_modules
+115 silly isManaged /usr is not inside /usr/lib/node_modules
+116 silly isManaged /usr is not inside /usr/lib/node_modules
+117 silly isManaged /usr is not inside /usr/lib/node_modules
+118 silly isManaged /usr is not inside /usr/lib/node_modules
+119 silly isManaged /usr is not inside /usr/lib/node_modules
+120 silly isManaged /usr/bin is inside /usr
+121 silly gentlyRm /usr is managed by npm
+122 silly gentlyRm /usr/bin/mean is under /usr
+123 verbose gentlyRm vacuuming /usr/bin/mean up to /usr
+124 silly isManaged /usr/bin is inside /usr
+125 silly gentlyRm /usr is managed by npm
+126 silly gentlyRm /usr/bin/mean-init is under /usr
+127 verbose gentlyRm vacuuming /usr/bin/mean-init up to /usr
+128 silly isManaged /usr/bin is inside /usr
+129 silly gentlyRm /usr is managed by npm
+130 silly gentlyRm /usr/bin/mean-authorize is under /usr
+131 verbose gentlyRm vacuuming /usr/bin/mean-authorize up to /usr
+132 silly isManaged /usr/bin is inside /usr
+133 silly gentlyRm /usr is managed by npm
+134 silly gentlyRm /usr/bin/mean-whoami is under /usr
+135 verbose gentlyRm vacuuming /usr/bin/mean-whoami up to /usr
+136 silly isManaged /usr/bin is inside /usr
+137 silly gentlyRm /usr is managed by npm
+138 silly gentlyRm /usr/bin/mean-login is under /usr
+139 verbose gentlyRm vacuuming /usr/bin/mean-login up to /usr
+140 silly isManaged /usr/bin is inside /usr
+141 silly gentlyRm /usr is managed by npm
+142 silly gentlyRm /usr/bin/mean-addKey is under /usr
+143 verbose gentlyRm vacuuming /usr/bin/mean-addKey up to /usr
+144 silly gentlyRm removing /usr/bin/mean-publish
+145 silly isManaged /usr/bin is inside /usr
+146 silly gentlyRm /usr is managed by npm
+147 silly gentlyRm /usr/bin/mean-search is under /usr
+148 verbose gentlyRm vacuuming /usr/bin/mean-search up to /usr
+149 silly isManaged /usr/bin is inside /usr
+150 silly gentlyRm /usr is managed by npm
+151 silly gentlyRm /usr/bin/mean-deploy is under /usr
+152 verbose gentlyRm vacuuming /usr/bin/mean-deploy up to /usr
+153 silly isManaged /usr/bin is inside /usr
+154 silly gentlyRm /usr is managed by npm
+155 silly gentlyRm /usr/bin/mean-logs is under /usr
+156 verbose gentlyRm vacuuming /usr/bin/mean-logs up to /usr
+157 silly isManaged /usr/bin is inside /usr
+158 silly gentlyRm /usr is managed by npm
+159 silly gentlyRm /usr/bin/mean-register is under /usr
+160 verbose gentlyRm vacuuming /usr/bin/mean-register up to /usr
+161 silly isManaged /usr/bin is inside /usr
+162 silly gentlyRm /usr is managed by npm
+163 silly gentlyRm /usr/bin/mean-postinstall is under /usr
+164 verbose gentlyRm vacuuming /usr/bin/mean-postinstall up to /usr
+165 silly isManaged /usr/bin is inside /usr
+166 silly gentlyRm /usr is managed by npm
+167 silly gentlyRm /usr/bin/mean-preinstall is under /usr
+168 verbose gentlyRm vacuuming /usr/bin/mean-preinstall up to /usr
+169 silly isManaged /usr/bin is inside /usr
+170 silly gentlyRm /usr is managed by npm
+171 silly gentlyRm /usr/bin/mean-install is under /usr
+172 verbose gentlyRm vacuuming /usr/bin/mean-install up to /usr
+173 silly isManaged /usr/bin is inside /usr
+174 silly gentlyRm /usr is managed by npm
+175 silly gentlyRm /usr/bin/mean-uninstall is under /usr
+176 verbose gentlyRm vacuuming /usr/bin/mean-uninstall up to /usr
+177 silly isManaged /usr/bin is inside /usr
+178 silly gentlyRm /usr is managed by npm
+179 silly gentlyRm /usr/bin/mean-docs is under /usr
+180 verbose gentlyRm vacuuming /usr/bin/mean-docs up to /usr
+181 silly isManaged /usr/bin is inside /usr
+182 silly gentlyRm /usr is managed by npm
+183 silly gentlyRm /usr/bin/mean-package is under /usr
+184 verbose gentlyRm vacuuming /usr/bin/mean-package up to /usr
+185 silly isManaged /usr/bin is inside /usr
+186 silly gentlyRm /usr is managed by npm
+187 silly gentlyRm /usr/bin/mean-list is under /usr
+188 verbose gentlyRm vacuuming /usr/bin/mean-list up to /usr
+189 silly isManaged /usr/bin is inside /usr
+190 silly gentlyRm /usr is managed by npm
+191 silly gentlyRm /usr/bin/mean-status is under /usr
+192 verbose gentlyRm vacuuming /usr/bin/mean-status up to /usr
+193 silly isManaged /usr/bin is inside /usr
+194 silly gentlyRm /usr is managed by npm
+195 silly gentlyRm /usr/bin/mean-user is under /usr
+196 verbose gentlyRm vacuuming /usr/bin/mean-user up to /usr
+197 silly gentlyRm removing /usr/bin/mean
+198 silly gentlyRm removing /usr/bin/mean-init
+199 silly gentlyRm removing /usr/bin/mean-authorize
+200 silly gentlyRm removing /usr/bin/mean-whoami
+201 silly gentlyRm removing /usr/bin/mean-login
+202 silly gentlyRm removing /usr/bin/mean-addKey
+203 silly gentlyRm removing /usr/bin/mean-search
+204 silly gentlyRm removing /usr/bin/mean-deploy
+205 silly gentlyRm removing /usr/bin/mean-logs
+206 silly gentlyRm removing /usr/bin/mean-register
+207 silly gentlyRm removing /usr/bin/mean-postinstall
+208 silly gentlyRm removing /usr/bin/mean-preinstall
+209 silly gentlyRm removing /usr/bin/mean-install
+210 silly gentlyRm removing /usr/bin/mean-uninstall
+211 silly gentlyRm removing /usr/bin/mean-docs
+212 silly gentlyRm removing /usr/bin/mean-package
+213 silly gentlyRm removing /usr/bin/mean-list
+214 silly gentlyRm removing /usr/bin/mean-status
+215 silly gentlyRm removing /usr/bin/mean-user
+216 verbose unlock done using /home/cabox/.npm/_locks/mean-cli-e77487bc052d558f.lock for /usr/lib/node_modules/mean-cli
+217 verbose stack Error: EACCES, unlink '/usr/bin/mean-publish'
+218 verbose cwd /home/cabox/workspace/project2
+219 error Linux 2.6.32-042stab112.15
+220 error argv "node" "/usr/bin/npm" "install" "-g" "mean-cli" "--save"
+221 error node v0.10.36
+222 error npm  v2.6.0
+223 error path /usr/bin/mean-publish
+224 error code EACCES
+225 error errno 3
+226 error Error: EACCES, unlink '/usr/bin/mean-publish'
+226 error  { [Error: EACCES, unlink '/usr/bin/mean-publish'] errno: 3, code: 'EACCES', path: '/usr/bin/mean-publish' }
+227 error Please try running this command again as root/Administrator.
+228 verbose exit [ 3, true ]
+229 verbose unbuild lib/node_modules/mean-cli
+230 info preuninstall mean-cli@0.9.20
+231 info uninstall mean-cli@0.9.20
+232 verbose unbuild rmStuff mean-cli@0.9.20 from /usr/lib/node_modules
+233 verbose gentlyRm verifying that /usr is managed by npm
+234 silly isManaged /usr is not inside /usr/lib/node_modules
+235 silly isManaged /usr is not inside /usr/lib/node_modules
+236 silly isManaged /usr is not inside /usr/bin
+237 silly isManaged /usr is inside /usr
+238 verbose gentlyRm verifying that /usr is managed by npm
+239 silly isManaged /usr is not inside /usr/lib/node_modules
+240 silly isManaged /usr is not inside /usr/lib/node_modules
+241 silly isManaged /usr is not inside /usr/bin
+242 silly isManaged /usr is inside /usr
+243 verbose gentlyRm verifying that /usr is managed by npm
+244 silly isManaged /usr is not inside /usr/lib/node_modules
+245 silly isManaged /usr is not inside /usr/lib/node_modules
+246 silly isManaged /usr is not inside /usr/bin
+247 silly isManaged /usr is inside /usr
+248 verbose gentlyRm verifying that /usr is managed by npm
+249 silly isManaged /usr is not inside /usr/lib/node_modules
+250 silly isManaged /usr is not inside /usr/lib/node_modules
+251 silly isManaged /usr is not inside /usr/bin
+252 silly isManaged /usr is inside /usr
+253 verbose gentlyRm verifying that /usr is managed by npm
+254 silly isManaged /usr is not inside /usr/lib/node_modules
+255 silly isManaged /usr is not inside /usr/lib/node_modules
+256 silly isManaged /usr is not inside /usr/bin
+257 silly isManaged /usr is inside /usr
+258 verbose gentlyRm verifying that /usr is managed by npm
+259 silly isManaged /usr is not inside /usr/lib/node_modules
+260 silly isManaged /usr is not inside /usr/lib/node_modules
+261 silly isManaged /usr is not inside /usr/bin
+262 silly isManaged /usr is inside /usr
+263 verbose gentlyRm verifying that /usr is managed by npm
+264 silly isManaged /usr is not inside /usr/lib/node_modules
+265 silly isManaged /usr is not inside /usr/lib/node_modules
+266 silly isManaged /usr is not inside /usr/bin
+267 silly isManaged /usr is inside /usr
+268 verbose gentlyRm verifying that /usr is managed by npm
+269 silly isManaged /usr is not inside /usr/lib/node_modules
+270 silly isManaged /usr is not inside /usr/lib/node_modules
+271 silly isManaged /usr is not inside /usr/bin
+272 silly isManaged /usr is inside /usr
+273 verbose gentlyRm verifying that /usr is managed by npm
+274 silly isManaged /usr is not inside /usr/lib/node_modules
+275 silly isManaged /usr is not inside /usr/lib/node_modules
+276 silly isManaged /usr is not inside /usr/bin
+277 silly isManaged /usr is inside /usr
+278 verbose gentlyRm verifying that /usr is managed by npm
+279 silly isManaged /usr is not inside /usr/lib/node_modules
+280 silly isManaged /usr is not inside /usr/lib/node_modules
+281 silly isManaged /usr is not inside /usr/bin
+282 silly isManaged /usr is inside /usr
+283 verbose gentlyRm verifying that /usr is managed by npm
+284 silly isManaged /usr is not inside /usr/lib/node_modules
+285 silly isManaged /usr is not inside /usr/lib/node_modules
+286 silly isManaged /usr is not inside /usr/bin
+287 silly isManaged /usr is inside /usr
+288 verbose gentlyRm verifying that /usr is managed by npm
+289 silly isManaged /usr is not inside /usr/lib/node_modules
+290 silly isManaged /usr is not inside /usr/lib/node_modules
+291 silly isManaged /usr is not inside /usr/bin
+292 silly isManaged /usr is inside /usr
+293 verbose gentlyRm verifying that /usr is managed by npm
+294 silly isManaged /usr is not inside /usr/lib/node_modules
+295 silly isManaged /usr is not inside /usr/lib/node_modules
+296 silly isManaged /usr is not inside /usr/bin
+297 silly isManaged /usr is inside /usr
+298 verbose gentlyRm verifying that /usr is managed by npm
+299 silly isManaged /usr is not inside /usr/lib/node_modules
+300 silly isManaged /usr is not inside /usr/lib/node_modules
+301 silly isManaged /usr is not inside /usr/bin
+302 silly isManaged /usr is inside /usr
+303 verbose gentlyRm verifying that /usr is managed by npm
+304 silly isManaged /usr is not inside /usr/lib/node_modules
+305 silly isManaged /usr is not inside /usr/lib/node_modules
+306 silly isManaged /usr is not inside /usr/bin
+307 silly isManaged /usr is inside /usr
+308 verbose gentlyRm verifying that /usr is managed by npm
+309 silly isManaged /usr is not inside /usr/lib/node_modules
+310 silly isManaged /usr is not inside /usr/lib/node_modules
+311 silly isManaged /usr is not inside /usr/bin
+312 silly isManaged /usr is inside /usr
+313 verbose gentlyRm verifying that /usr is managed by npm
+314 silly isManaged /usr is not inside /usr/lib/node_modules
+315 silly isManaged /usr is not inside /usr/lib/node_modules
+316 silly isManaged /usr is not inside /usr/bin
+317 silly isManaged /usr is inside /usr
+318 verbose gentlyRm verifying that /usr is managed by npm
+319 silly isManaged /usr is not inside /usr/lib/node_modules
+320 silly isManaged /usr is not inside /usr/lib/node_modules
+321 silly isManaged /usr is not inside /usr/bin
+322 silly isManaged /usr is inside /usr
+323 verbose gentlyRm verifying that /usr is managed by npm
+324 silly isManaged /usr is not inside /usr/lib/node_modules
+325 silly isManaged /usr is not inside /usr/lib/node_modules
+326 silly isManaged /usr is not inside /usr/bin
+327 silly isManaged /usr is inside /usr
+328 verbose gentlyRm verifying that /usr is managed by npm
+329 silly isManaged /usr is not inside /usr/lib/node_modules
+330 silly isManaged /usr is not inside /usr/lib/node_modules
+331 silly isManaged /usr is not inside /usr/bin
+332 silly isManaged /usr is inside /usr
+333 silly gentlyRm /usr is managed by npm
+334 silly gentlyRm /usr/bin/mean is under /usr
+335 verbose gentlyRm vacuuming /usr/bin/mean up to /usr
+336 silly gentlyRm /usr is managed by npm
+337 silly gentlyRm /usr/bin/mean-init is under /usr
+338 verbose gentlyRm vacuuming /usr/bin/mean-init up to /usr
+339 silly gentlyRm /usr is managed by npm
+340 silly gentlyRm /usr/bin/mean-authorize is under /usr
+341 verbose gentlyRm vacuuming /usr/bin/mean-authorize up to /usr
+342 silly gentlyRm /usr is managed by npm
+343 silly gentlyRm /usr/bin/mean-whoami is under /usr
+344 verbose gentlyRm vacuuming /usr/bin/mean-whoami up to /usr
+345 silly gentlyRm /usr is managed by npm
+346 silly gentlyRm /usr/bin/mean-login is under /usr
+347 verbose gentlyRm vacuuming /usr/bin/mean-login up to /usr
+348 silly gentlyRm /usr is managed by npm
+349 silly gentlyRm /usr/bin/mean-addKey is under /usr
+350 verbose gentlyRm vacuuming /usr/bin/mean-addKey up to /usr
+351 silly gentlyRm /usr is managed by npm
+352 silly gentlyRm /usr/bin/mean-publish is under /usr
+353 verbose gentlyRm vacuuming /usr/bin/mean-publish up to /usr
+354 silly gentlyRm /usr is managed by npm
+355 silly gentlyRm /usr/bin/mean-search is under /usr
+356 verbose gentlyRm vacuuming /usr/bin/mean-search up to /usr
+357 silly gentlyRm /usr is managed by npm
+358 silly gentlyRm /usr/bin/mean-deploy is under /usr
+359 verbose gentlyRm vacuuming /usr/bin/mean-deploy up to /usr
+360 silly gentlyRm /usr is managed by npm
+361 silly gentlyRm /usr/bin/mean-logs is under /usr
+362 verbose gentlyRm vacuuming /usr/bin/mean-logs up to /usr
+363 silly gentlyRm /usr is managed by npm
+364 silly gentlyRm /usr/bin/mean-register is under /usr
+365 verbose gentlyRm vacuuming /usr/bin/mean-register up to /usr
+366 silly gentlyRm /usr is managed by npm
+367 silly gentlyRm /usr/bin/mean-postinstall is under /usr
+368 verbose gentlyRm vacuuming /usr/bin/mean-postinstall up to /usr
+369 silly gentlyRm /usr is managed by npm
+370 silly gentlyRm /usr/bin/mean-preinstall is under /usr
+371 verbose gentlyRm vacuuming /usr/bin/mean-preinstall up to /usr
+372 silly gentlyRm /usr is managed by npm
+373 silly gentlyRm /usr/bin/mean-install is under /usr
+374 verbose gentlyRm vacuuming /usr/bin/mean-install up to /usr
+375 silly gentlyRm /usr is managed by npm
+376 silly gentlyRm /usr/bin/mean-uninstall is under /usr
+377 verbose gentlyRm vacuuming /usr/bin/mean-uninstall up to /usr
+378 silly gentlyRm /usr is managed by npm
+379 silly gentlyRm /usr/bin/mean-docs is under /usr
+380 verbose gentlyRm vacuuming /usr/bin/mean-docs up to /usr
+381 silly gentlyRm /usr is managed by npm
+382 silly gentlyRm /usr/bin/mean-package is under /usr
+383 verbose gentlyRm vacuuming /usr/bin/mean-package up to /usr
+384 silly gentlyRm /usr is managed by npm
+385 silly gentlyRm /usr/bin/mean-list is under /usr
+386 verbose gentlyRm vacuuming /usr/bin/mean-list up to /usr
+387 silly gentlyRm /usr is managed by npm
+388 silly gentlyRm /usr/bin/mean-status is under /usr
+389 verbose gentlyRm vacuuming /usr/bin/mean-status up to /usr
+390 silly gentlyRm /usr is managed by npm
+391 silly gentlyRm /usr/bin/mean-user is under /usr
+392 verbose gentlyRm vacuuming /usr/bin/mean-user up to /usr
+393 silly gentlyRm removing /usr/bin/mean
+394 silly gentlyRm removing /usr/bin/mean-init
+395 silly gentlyRm removing /usr/bin/mean-authorize
+396 silly gentlyRm removing /usr/bin/mean-whoami
+397 silly gentlyRm removing /usr/bin/mean-login
+398 silly gentlyRm removing /usr/bin/mean-addKey
+399 silly gentlyRm removing /usr/bin/mean-publish
+400 silly gentlyRm removing /usr/bin/mean-search
+401 silly gentlyRm removing /usr/bin/mean-deploy
+402 silly gentlyRm removing /usr/bin/mean-logs
+403 silly gentlyRm removing /usr/bin/mean-register
+404 silly gentlyRm removing /usr/bin/mean-postinstall
+405 silly gentlyRm removing /usr/bin/mean-preinstall
+406 silly gentlyRm removing /usr/bin/mean-install
+407 silly gentlyRm removing /usr/bin/mean-uninstall
+408 silly gentlyRm removing /usr/bin/mean-docs
+409 silly gentlyRm removing /usr/bin/mean-package
+410 silly gentlyRm removing /usr/bin/mean-list
+411 silly gentlyRm removing /usr/bin/mean-status
+412 silly gentlyRm removing /usr/bin/mean-user
+413 error error rolling back Error: EACCES, unlink '/usr/bin/mean'
+413 error error rolling back  { [Error: EACCES, unlink '/usr/bin/mean'] errno: 3, code: 'EACCES', path: '/usr/bin/mean' }
