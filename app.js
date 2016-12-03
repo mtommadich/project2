@@ -5,11 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expHbs = require('express-handlebars');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 
 var app = express();
+mongoose.connect('mongodb://localhost/mean-dev');
 
 // view engine setup
 app.engine('.hbs', expHbs({defaultLayout: 'layout', extname: '.hbs'}));
