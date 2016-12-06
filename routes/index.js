@@ -3,65 +3,51 @@ var router = express.Router();
 var csrf = require('csurf');
 var passport = require('passport');
 var Pdf = require('../models/pdf');
-var csrfProtection = csrf();
+//var csrfProtection = csrf();
+//router.use(csrfProtection);
 
+//create Pdf model object
+var Pdf = require('../models/pdf');
+//import mongoose
+var mongoose = require('mongoose');
 
-router.use(csrfProtection);
+router.get('/addbook', isLoggedIn,function(req, res, next) {
+  var messages = req.flash('error');
+  res.render('books/addbook');
+});
+
+router.get('books/addbook', isLoggedIn,function(req, res, next) {
+  var messages = req.flash('error');
+  res.render('books/addbook');
+});
+
+router.post('/addbook', isLoggedIn,function(req, res) { 
+  var newPdf = new Pdf ();
+    newPdf.iconPath = '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>';
+    newPdf.title = req.body.title;
+    newPdf.category = "development";
+    newPdf.description = req.body.description;  
+    newPdf.link = req.body.link; 
+    newPdf.save();    
+    res.render('user/books');
+  console.log("posted something");
+});
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Pdf.find(function(err, docs) {
-    var rowsContent = [];
-    var rowSize = 3;
-    for (var i = 0; i < docs.length; i += rowSize) {
-      rowsContent.push(docs.slice(i, i + rowSize));
-    }
-    res.render('shop/index', {
-      title: 'Ebooks',
-      documents: rowsContent
-    });
-
+  res.render('books/index', {
+  title: 'Contacts'
   });
 });
 
-//Get user registration this also provides csrf token athentication
-router.get('/user/register', function(req, res, next) {
-  var messages = req.flash('error');
-  res.render('user/register', {
-    csrfToken: req.csrfToken(),
-    messages: messages,
-    hasErrors: messages.length > 0
-  });
-});
-
-//register the user and redirect to profile on success or retry on failure
-router.post('/user/register', passport.authenticate('local.registration', {
-  successRedirect: '/user/profile',
-  failureRedirect: '/user/register',
-  failureFlash: true
-}));
-
-//get user profile page
-router.get('/user/profile', function(req, res, next) {
-  res.render('user/profile');
-});
-
-//get user login route
-router.get('/user/login', function(req, res, next) {
-  var messages = req.flash('error');
-  res.render('user/login', {
-    csrfToken: req.csrfToken(),
-    messages: messages,
-    hasErrors: messages.length > 0
-  });
-});
-
-//get the user login route
-router.post('/user/login', passport.authenticate('local.login', {
-  successRedirect: '/user/profile',
-  failureRedirect: '/user/login',
-  failureFlash: true
-}));
 
 
 module.exports = router;
+
+function isLoggedIn(req,res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect('/books');
+}

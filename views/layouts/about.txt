@@ -5,6 +5,6 @@ main layout file "layout.hbs" and go between curly braces wherever
 they are supposed to show in the html hirarchy, like so:
 
 <body>
-{{{ body }}}    "body" is a variable defined in 
+{{{ body }}}    "body" is a variable defined in handlebars
 
 </body>

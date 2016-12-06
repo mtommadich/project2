@@ -1,0 +1,27 @@
+{{# each documents}}
+  <div class="row">
+    {{# each this }}     
+    <div class="col-sm-4 col-md-4">
+      <div class="thumbnail">
+        <span style="font-size: 7em; float: right; margin: .1em; color: red;">  
+         {{{ this.iconPath }}}
+        </span>
+        <!-- img src="..." alt="pdf icon"-->
+        <div class="caption">
+          <h3>{{this.title}}</h3>
+          <p class="description">{{this.description}}</p>
+          <div class="clearfix"><a href="{{this.link}}" class="btn btn-primary btn-rounded pull-left" role="button"><i class="fa fa-download" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> 
+    {{/each}}
+  </div>  
+{{/each}}     
+      
+    
+    
+    
+
+
+

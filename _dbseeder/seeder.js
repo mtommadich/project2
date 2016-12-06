@@ -20,37 +20,43 @@ var pdfs = [
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'Blender 2.7 Tutorial',
   category: '3D Modelling',
-  description: 'Learn Blender modeling!'
+  description: 'Learn Blender modeling!',
+  link: "/_ebooks/Blender2.7Tutorial1.pdf"
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'Android 5 Programming',
   category: 'Android',
-  description: 'Learn Android Programming!'
+  description: 'Learn Android Programming!',
+  link: "/_ebooks/ANDROID_5_PROGRAMMING_BY_EXAMPLE.pdf"
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'ANDROID STUDIO APPLICATION DEVELOPMENT',
-  category: '3D Modelling',
-  description: 'Learn Android Programming!'
+  category: 'Android',
+  description: 'Learn Android Programming!',
+  link: "/_ebooks/ANDROID_STUDIO_APPLICATION_DEVELOPMENT.pdf"
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'ASYNCHRONOUS ANDROID',
-  category: '3D Modelling',
-  description: 'Learn Android Programming!'
+  category: 'Android',
+  description: 'Learn Android Programming!',
+  link: "/_ebooks/ASYNCHRONOUS_ANDROID.pdf"
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'BURP SUITE ESSENTIALS',
   category: 'Web Development',
-  description: 'Learn burp suite!'
+  description: 'Learn burp suite!',
+  link: "/_ebooks/BURP_SUITE_ESSENTIALS.pdf"
   }),
   new Pdf({
   iconPath:'<i class="fa fa-file-pdf-o" aria-hidden="true"></i>',
   title:'INSTANT NODEJS STARTER',
   category: 'Web Development',
-  description: 'Learn about nodejs!'
+  description: 'Learn about nodejs!',
+  link: "/_ebooks/INSTANT_NODEJS_STARTER.pdf"
   })  
 ];
 
