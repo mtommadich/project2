@@ -31,7 +31,11 @@ router.get('/books', function(req, res, next) {
     });
   });
 });
+//get boomboom pageXOffset
 
+router.get('/boomboom', function(req,res,next){
+  res.render('user/boomboom');
+})
 //get log out page
 router.get('/logout', function(req, res, next){
   req.logout();

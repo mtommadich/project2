@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
+  <div class="col-md-4 col-md-offset-0">
     <h1>Login</h1>    
     {{# if hasErrors}}
       <div class="alert alert-danger">
@@ -22,4 +22,21 @@
       <button type="submit" class="btn btn-primary">Login</button>
     </form>    
   </div>
+<div class="instructions col-sm-8 col-md-8">    
+
+    <h1>
+      Overview
+    </h1>
+    <p>
+      Welcome to the login page. We are using the following technologies here:
+      <ul>
+        <li>Bootstrap 3 for layout and styling</li>
+        <li>CSRF token validation</li>
+        <li>Form input validation</li>
+        <li>Express-Handlebars to pull in system generated Error messages and display them.</li>
+        <li>On submit we use the node passport module to authenticate the user and handle the user session.</li>
+    </ul>
+      This page demonstrates CSRF token validation and user input validation.
+    </p>
+</div>
 </div>

@@ -38,3 +38,10 @@
 
   
 }
+
+.instructions{
+  background-color: #e7e7e7;
+  border: solid 4px;
+  border-color: red;
+  border-radius: 1em;
+}

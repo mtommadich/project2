@@ -1,6 +1,7 @@
 <div class="container" ng-controller="AppCtrl">
-    <h1>My Contacts</h1>
+    
     {{# if login }}
+    <h1>My Contacts</h1>
     <table class="table">
       <thead>
         <tr>
@@ -28,13 +29,38 @@
           
           <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
-     {{ else }}
-          <h2>Login or register to view contacts.</h2>          
-     {{/if}}
-        </tr>
-        
+        </tr>       
       </tbody>
     </table>
+    <div class="container instructions">
+      <p>
+        You can add new contacts, edit contacts, and remove existing contacts here by clicking the appropriate buttons.
+      </p>
+      <p>
+        This page uses the following technologies:
+      </p>
+      <ul>
+        <li>Bootstrap 3 for layout and styling</li>
+        <li>Angular JS for implementing dynamic data into our static templates</li>
+        <li>Express-handlebars for dynamic templating</li>
+        <li>MongoDB for managing contacts</li>
+      </ul>
+      <p>
+        This page demonstrates full CRUD and angular js.
+      </p>
+    </div>  
+     {{ else }}
+        <div class="instructions container col-md-8 col-md-offset-0">
+          <h1>Welcome to the web app project of M. Tommadich and B. Singh</h1>
+          <p>
+            In order to use this app, you need to register an account under <b>Settings/Register</b> for yourself and then sign in with your chosen email address and password combination under <b>Settings/Log in</b> whenever you come back.
+          </p>
+        </div>
+     {{/if}}
+
+    
+      
+  
 </div>
 
 

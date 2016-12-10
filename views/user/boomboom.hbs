@@ -1,0 +1,241 @@
+<script>
+			var canvas;
+      var canvasContext;
+			var canvasColor = 'black';
+      var ballX = 100;
+      var ballY = 100;
+      var ballSpeedX = 15;
+      var ballSpeedY = 5;
+			const BASE_SPEED_X =15;
+			const BASE_SPEED_Y = 5;
+      var ballSize =30;
+      var paddle1Y = 250;
+      var paddle2Y = 250;
+			var boom = false;
+			var boomColor = 'white';
+			var p1Score = 0;
+			var p2Score = 0;
+			var ballColor = 'white';
+			var p1Color = 'blue';
+			var p2Color = 'red'
+      var gravity = 0.1;
+			var isDemo = false;
+			var framesPerSecond = 30;
+			
+			const PADDLE_HEIGHT = 120;
+			const PADDLE_MARGIN = 10;
+			const PADDLE_THICKNESS = 30;
+			const STAND_BALLSIZE = 30;
+            
+
+			//making sure all code is loaded before the program can start
+        window.onload = function(){
+        console.log("Log this");
+        canvas = document.getElementById('gameCanvas');
+        canvasContext = canvas.getContext('2d');
+				p1Counter = document.getElementById('P1');
+				p2Counter = document.getElementById('P2');
+				
+				//setting up the frame rate
+
+				setInterval(function(){moveEverything();drawEverything();}, 1000/framesPerSecond);
+				ballReset();
+				// calculating the mouse position here
+				function calculateMousePos(evt){
+					var rect = canvas.getBoundingClientRect();
+					var root = document.documentElement;
+					var mouseX = evt.clientX - rect.left - root.scrollLeft;
+					var mouseY = evt.clientY - rect.top - root.scrollTop;
+					return {
+							x:mouseX,
+							y:mouseY
+					};
+				}
+			
+				//capturing mouse input and moving the paddle if we're not in demo mode
+				if(!isDemo){ 
+					canvas.addEventListener('mousemove',
+												function(evt){
+													var mousePos = calculateMousePos(evt);
+													paddle1Y = mousePos.y-(PADDLE_HEIGHT /2);												 
+												}
+											);
+				}
+				
+				//reset the ball
+				function ballReset(){
+					ballX = canvas.width/2;
+					ballY = canvas.height/2;
+					ballSpeedX = Math.floor(-ballSpeedX*BASE_SPEED_X/ballSpeedX);
+					ballSpeedY -= Math.random()*2;
+					ballColor = 'white';
+					ballSize = STAND_BALLSIZE;
+					
+					
+				}
+
+				//calculate left paddle movement (for demo play)
+				function playerMove(){
+					if(ballSpeedX <0){
+						if(ballY < paddle1Y+(PADDLE_HEIGHT/2)-20 ){
+							paddle1Y -= 8;
+							
+						}else if(ballY > paddle1Y+(PADDLE_HEIGHT/2)+20 ){
+							paddle1Y +=8;
+							
+						}
+					}
+				}								
+	/*			//calculate computer movement KI version 2
+				function computerMove(){
+					if(ballSpeedX > 0){
+						if(ballY < paddle2Y+(PADDLE_HEIGHT/2)-20){
+							paddle2Y -= 8;
+						
+						}else if(ballY > paddle2Y+(PADDLE_HEIGHT/2)+20){
+							paddle2Y +=8;						
+					
+						}
+					}
+				}
+	*/			
+				//calculate computer movement KI version 1
+				function computerMove(){
+					if(ballY < paddle2Y+(PADDLE_HEIGHT/2)-20){
+					paddle2Y -= 8;
+						
+					}else if(ballY > paddle2Y+(PADDLE_HEIGHT/2)+20){
+						paddle2Y +=8;							
+					}
+				}
+				
+				//calculate the movement of everything 
+				function moveEverything(){
+					ballX += ballSpeedX;
+					ballY += ballSpeedY; 
+					
+					if(isDemo){
+						computerMove();
+						playerMove(); 
+					}else{
+						computerMove();
+					}
+					if(ballX > canvas.width){
+						ballReset();
+						p1Score ++;
+						p1Counter.innerHTML = p1Score;
+					}
+					
+					if(ballX < 0){
+						ballReset();
+						p2Score ++;
+						p2Counter.innerHTML = p2Score;
+					}
+					ballSpeedY+=gravity;
+					
+					//calculate collision with paddle 1
+					if(ballX <= PADDLE_MARGIN+PADDLE_THICKNESS+ballSize && ballY >= paddle1Y && ballY <= paddle1Y+PADDLE_HEIGHT){
+						ballSpeedX = Math.floor(BASE_SPEED_X+Math.random()*3); 
+					
+						//this is finding the height difference between ball center and center of the paddle
+						var deltaY = ballY - (paddle1Y+PADDLE_HEIGHT/2) 
+					//	ballSize = STAND_BALLSIZE;
+						ballSpeedY = deltaY*0.3;
+						//ballSize = 10+deltaY;
+						
+						if (deltaY < 8 && deltaY > -8 || deltaY >= 52 || deltaY <= -52){
+							boomColor = p1Color;
+							boom = true;
+						//	ballSize *= 0.5;
+							ballSpeedX += 25;							
+						}
+						
+						ballColor = p1Color; //change to player 1 color on bounce						
+					
+					}
+					
+					//calculate collision with paddle 2
+					if(ballX >= canvas.width-(PADDLE_MARGIN+PADDLE_THICKNESS+ballSize) && ballY >= paddle2Y && ballY <= paddle2Y+PADDLE_HEIGHT){
+						ballSpeedX = Math.floor(-(BASE_SPEED_X+Math.random()*3)); 	
+					
+						//this is finding the height difference between ball center and center of the paddle
+						var deltaY = ballY - (paddle2Y+PADDLE_HEIGHT/2) 
+					//	ballSize = STAND_BALLSIZE;
+						ballSpeedY = deltaY*0.3;
+						//ballSize = 10+deltaY;
+						
+						if (deltaY < 8 && deltaY > -8 || deltaY >= 52 || deltaY <= -52){
+							boomColor = p2Color;
+							boom = true;
+						//	ballSize *= 0.5;
+							ballSpeedX -= 25;
+							
+						}
+						
+						ballColor = p2Color; //change to player 2 color on bounce							
+
+					}
+					
+					//calculate collision bottom and top
+					if(ballY > (canvas.height-(ballSize))){
+						ballSpeedY = -ballSpeedY;
+					}else if(ballY < (0+(ballSize))){
+						ballSpeedY = -ballSpeedY;
+					}
+				}
+				
+				
+
+				//drawing all calculated movements at once
+				function drawEverything() {
+				
+					if(boom){
+						colorRect(0,0,canvas.width,canvas.height,boomColor);
+						boom = false;
+					}else{
+						colorRect(0,0,canvas.width,canvas.height,canvasColor);
+					}
+				//	colorRect(0,0,canvas.width,canvas.height,'black'); //Canvas background - always draw this one first
+					colorCircle(ballX,ballY,ballSize,ballColor); //that's the ball :)
+					colorCircle(ballX-14,ballY-5,20,'white');
+					colorCircle(ballX+14,ballY-5,17,'white');
+					colorCircle(ballX-10,ballY-5,10,'black'); 
+					colorCircle(ballX+10,ballY-5,8,'black');
+					colorRect(PADDLE_MARGIN,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, p1Color); //tennis racket 1
+					colorRect(canvas.width-PADDLE_MARGIN-PADDLE_THICKNESS,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, p2Color); //tennis racket 2 (computer)
+					canvasContext.fillStyle = "white";
+					//canvasContext.fillText(p1Score, 100,100);
+					//canvasContext.fillText(p2Score, canvas.width-200,100);
+					//canvasContext.fillText("Ball Velocity X: "+ballSpeedX+" Y: "+ballSpeedY , 350,580);
+					
+				}
+       
+
+				// function "colorRect" to act as a template for drawing arbitrary rectangles
+				function colorRect(leftX,topY,width,height, drawColor){
+					canvasContext.fillStyle = drawColor;
+					canvasContext.fillRect(leftX,topY,width,height);
+				}
+         
+
+				// function "colorCircle" to draw arbitrary circles
+				function colorCircle(centerX,centerY, ballSize, drawColor){
+					canvasContext.fillStyle = drawColor;
+					canvasContext.beginPath();
+					canvasContext.arc(centerX,centerY, ballSize, 0,Math.PI*2, true);
+					canvasContext.fill();
+				}
+				
+			}
+        </script>
+<div class="container">
+		<div class="pull-left" id="p1score"><b></b><span id="P1" Style="font-size: 3em;">0</span></b></div>
+		<div class="pull-right" id="p2score"><b></b><span id="P2" Style="font-size: 3em;">0</span></b></div>
+</div>
+<canvas id="gameCanvas" width="1200" height="600" style="position: absolute;  top:0; bottom: 0; left: 0; right: 0; margin:auto;" >Your browser doesn't support html5</canvas>
+<div class="container instructions">
+  <p>
+    This page demonstrates client side scripting using HTML Canvas and JavaScript.
+  </p>      
+</div>
+	
