@@ -1,6 +1,6 @@
 <div class="container" ng-controller="AppCtrl">
     <h1>My Contacts</h1>
-    {{#if login}}
+    {{# if login }}
     <table class="table">
       <thead>
         <tr>
@@ -14,7 +14,7 @@
       <tbody>
         <tr>
           <td><input class="form-control" ng-model="contact.name"></td>
-          <td><input class="form-control" ng-model="contact.email" type="email" name="email" required></td>
+          <td><input class="form-control" ng-model="contact.email"></td>
           <td><input class="form-control" ng-model="contact.number"></td>
           <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
           <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
@@ -28,10 +28,9 @@
           
           <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
-          {{ else }}
-          <h2>Login or register to view contacts.</h2>
-          
-          {{/if}}
+     {{ else }}
+          <h2>Login or register to view contacts.</h2>          
+     {{/if}}
         </tr>
         
       </tbody>

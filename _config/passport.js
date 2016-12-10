@@ -39,13 +39,13 @@ passport.use('local.registration', new LocalStrategy({
     //Checks if email is already in database. If it returns an error, 
     //the email is not in the db...
     if (err) {
-      //...in which case we return the err
+      //...in which case we return the err, so passport knows the email isn't registered
       return done(err);
     }
     // If we find a user belonging to the entered email, we return a messge 
     if (user) {
       return done(null, false, {
-        message: 'Email is already registered'
+        message: 'This Email is already registered'
       });
     }
     var newUser = new User();

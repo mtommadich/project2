@@ -41,7 +41,7 @@ app.use(cookieParser());
 //Mario - DONT FORGET TO ADD THE readme for the database seeder... 
 
 app.use(session({
-  secret: 'myPassword',
+  secret: 'myPassword', //ideally this should be a better password
   resave: false, //safety precaution
   saveUninitialized: false //safety precaution
 }));
@@ -62,7 +62,7 @@ res.locals.login = req.isAuthenticated();
 app.use('/user', userRoutes);
 app.use('/', routes);
 
-//Contact list related stuff below. Whoohoo!
+//Contact list related stuff below.
 app.get('/contactlist', function (req, res) {
   db.contactlist.find(function (err, docs) {
     console.log(docs);
@@ -130,4 +130,3 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-//////////////// Done already?!? Wait a minute - this wasn't fun at all!! :_( I want my money back ////////////
